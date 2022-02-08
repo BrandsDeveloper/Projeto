@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&family=Sen:wght@400;700;800&display=swap');
 
 *{
+    margin: 0px;
+    padding: 0px;
     font-family: 'Commissioner', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: initial;
+    text-decoration: none;
+}
+
+#header{
+    width: 13%;
+    height: 100vh;
+}
+
+header nav ul li a{
+    line-height: 40px;
+    background-color: #f2f3f5;
+    border-radius: 50px;
+    color: #45505b;
+    transition: all 1s;
+}
+
+header nav ul li a:hover{
+    background-color: #186FC0;
+    color: #f7f7f7;
+    text-align: left;
+}
+
+main #name{
+    position: absolute;
+    top: 0%;
+    height: 100vh;
 }
