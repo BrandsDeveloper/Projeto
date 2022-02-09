@@ -16,6 +16,7 @@ a{
 }
 
 #header{
+    position: fixed;
     width: 13%;
     height: 100vh;
 }
@@ -30,8 +31,7 @@ header nav ul li a{
     border-radius: 50px;
     color: #45505b;
     overflow: hidden;
-    transition-property: width;
-    transition-duration:  1s;
+    transition: all 0.5s;
 }
 
 header nav ul li a:hover, .actived{
@@ -53,8 +53,25 @@ header nav ul li a > .p-style{
 }
 
 main #home{
-    position: absolute;
-    top: 0%;
     height: 100vh;
+    background: url("../img/Fundo.png") no-repeat center;
+    background-size: cover;
 }
 
+main #home .h-modify{
+    height: 100vh !important;
+}
+
+main #home .h-modify h1{
+    font-weight: 600;
+}
+
+main #home .font-modify{
+    font-size: 0.7em;
+    color: #45505b;
+    transition: all 2s;
+}
+
+main #home .font-modify:hover{
+    color: #186FC0;
+}
