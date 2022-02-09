@@ -15,6 +15,31 @@ a{
     text-decoration: none;
 }
 
+html, body{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    width: 8px; 
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #ebe8e8;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #133855;
+    border: 1px solid #133855;
+    border-radius: 30px;
+}
+
+#header input[type="checkbox"], label{
+    display: none;
+    position: fixed;
+    top: 5%;
+    right: 10%;
+}
+
 #header{
     position: fixed;
     width: 13%;
@@ -40,7 +65,7 @@ header nav ul li a:hover, .actived{
     color: #f7f7f7;
 }
 
-span{
+header nav ul li a span{
     display: none;
 }
 
@@ -50,6 +75,10 @@ header nav ul li a:hover span{
 
 header nav ul li a > .p-style{
     padding-left: 2px;
+}
+
+header nav ul li a > .p-style1{
+    padding-left: 3px;
 }
 
 main #home{
@@ -66,12 +95,54 @@ main #home .h-modify h1{
     font-weight: 600;
 }
 
-main #home .font-modify{
+main #home .font-modify a{
     font-size: 0.7em;
-    color: #45505b;
-    transition: all 2s;
+    color: #3f4144;
+    transition: all 0.5s;
 }
 
-main #home .font-modify:hover{
+main #home .font-modify a:hover{
     color: #186FC0;
+}
+
+
+
+
+@media(min-width: 300px) and (max-width: 700px){
+
+    header label{
+        display: block;
+    }
+
+    #header{
+        background-color: #acaeb1;
+        width: 100%;
+        z-index: 2;
+    }
+
+    header nav ul li a{
+        width: 220%;
+        justify-content: center;
+    }
+
+    header nav ul li a span{
+        display: block;
+    }
+
+    header nav p{
+        display: ;
+    }
+
+
+    main #home{
+        background: url("../img/Fundo.png") no-repeat ;
+        background-size: cover;
+        background-position-x: 100%;
+    }
+
+    main #home h1.font-modify{
+        font-size: 2.6em;
+    }
+
+
 }
