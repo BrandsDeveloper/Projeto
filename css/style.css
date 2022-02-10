@@ -36,6 +36,7 @@ body::-webkit-scrollbar-thumb{
 #header input[type="checkbox"], label{
     display: none;
     position: fixed;
+    z-index: 2;
     top: 5%;
     right: 10%;
 }
@@ -81,6 +82,10 @@ header nav ul li a > .p-style1{
     padding-left: 3px;
 }
 
+header p{
+    display: none;
+}
+
 main #home{
     height: 100vh;
     background: url("../img/Fundo.png") no-repeat center;
@@ -106,25 +111,38 @@ main #home .font-modify a:hover{
 }
 
 
-
-
-@media(min-width: 300px) and (max-width: 700px){
+@media(min-width: 300px) and (max-width: 660px){
 
     header label{
         display: block;
     }
 
-    #header{
-        position: fixed;
+    header nav{
+        position: fixed !important;
+        height: 100vh;
         background-color: #acaeb1;
         width: 100%;
-        z-index: 2;
+        z-index: 1;
         left: -100%;
         transition: all 0.5s;
     }
 
+    header p{
+        display: block;
+        position: fixed !important;
+        bottom: 15px;
+        z-index: 1;
+        width: 100%;
+        left: -100%;
+        transition: all 0.5s;
+    }
+
+    header nav ul{
+        width: 100%;
+    }
+
     header nav ul li a{
-        width: 220%;
+        width: 80%;
         justify-content: center;
     }
 
@@ -136,7 +154,7 @@ main #home .font-modify a:hover{
         display: none;
     }
 
-    #bars:checked ~ .teste{
+    #bars:checked ~ nav, #bars:checked ~ p{
         left: 0%;
     }
 
@@ -144,6 +162,8 @@ main #home .font-modify a:hover{
         background: url("../img/Fundo.png") no-repeat ;
         background-size: cover;
         background-position-x: 100%;
+        position: relative;
+        z-index: -1;
     }
 
     main #home h1.font-modify{
