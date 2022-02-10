@@ -115,9 +115,12 @@ main #home .font-modify a:hover{
     }
 
     #header{
+        position: fixed;
         background-color: #acaeb1;
         width: 100%;
         z-index: 2;
+        left: -100%;
+        transition: all 0.5s;
     }
 
     header nav ul li a{
@@ -130,9 +133,12 @@ main #home .font-modify a:hover{
     }
 
     header nav p{
-        display: ;
+        display: none;
     }
 
+    #bars:checked ~ .teste{
+        left: 0%;
+    }
 
     main #home{
         background: url("../img/Fundo.png") no-repeat ;
@@ -143,6 +149,5 @@ main #home .font-modify a:hover{
     main #home h1.font-modify{
         font-size: 2.6em;
     }
-
 
 }
