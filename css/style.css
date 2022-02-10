@@ -28,8 +28,8 @@ body::-webkit-scrollbar-track{
 }
 
 body::-webkit-scrollbar-thumb{
-    background: #133855;
-    border: 1px solid #133855;
+    background: #292a2b;
+    border: 1px solid #292a2b;
     border-radius: 30px;
 }
 
@@ -45,6 +45,7 @@ body::-webkit-scrollbar-thumb{
     position: fixed;
     width: 13%;
     height: 100vh;
+    z-index: 1;
 }
 
 header nav ul li a{
@@ -84,6 +85,16 @@ header nav ul li a > .p-style1{
 
 header p{
     display: none;
+}
+
+main #home::before{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    background: #ffffff8a;
 }
 
 main #home{
