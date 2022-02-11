@@ -88,6 +88,7 @@ header p{
 }
 
 main #home::before{
+    height: 115vh;
     content: "";
     position: absolute;
     bottom: 0%;
@@ -98,8 +99,8 @@ main #home::before{
 }
 
 main #home{
-    height: 100vh;
-    background: url("../img/Fundo.png") no-repeat center;
+    height: 115vh;
+    background: url("../img/Fundo3.png") no-repeat center;
     background-size: cover;
 }
 
@@ -121,6 +122,19 @@ main #home .font-modify a:hover{
     color: #186FC0;
 }
 
+main .position-waves{
+    margin-top: -5%;
+}
+
+main #sobre > div > .hr{
+    width: 8%;
+}
+
+main #sobre > div > .hr:nth-of-type(1){
+    width: 3%;
+    border: 1px solid blue;
+    
+}
 
 @media(min-width: 300px) and (max-width: 660px){
 
@@ -170,7 +184,7 @@ main #home .font-modify a:hover{
     }
 
     main #home{
-        background: url("../img/Fundo.png") no-repeat ;
+        background: url("../img/Fundo3.png") no-repeat ;
         background-size: cover;
         background-position-x: 100%;
         position: relative;
