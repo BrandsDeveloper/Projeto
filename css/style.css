@@ -152,6 +152,34 @@ main #sobre div > h3{
     color: #326273;
 }
 
+main #sobre div div h6{
+    color: #326273;
+    font-weight: 600;
+}
+
+main #sobre div .btn-modify > a{
+    color: inherit;
+    text-decoration: none;
+}
+
+main #sobre div .btn-modify{
+    background-color: #326273;
+}
+
+main #sobre div .btn-modify:hover{
+    background-color: #2a505f;
+}
+
+main #sobre div .btn-outline-modify{
+    color: #326273;
+    border-color: #326273;
+}
+
+main #sobre div .btn-outline-modify:hover{
+    background-color: #326273;
+    color: white;
+}
+
 @media(min-width: 300px) and (max-width: 660px){
 
     header label{
@@ -205,10 +233,14 @@ main #sobre div > h3{
         background-position-x: 87%;
         position: relative;
         z-index: -1;
+        height: 100vh;
     }
 
     main #home h1.font-modify{
         font-size: 2.6em;
     }
 
+    main #sobre > div > div .img{
+        height: 40vh;
+    }
 }
