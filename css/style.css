@@ -6,6 +6,23 @@
     font-family: 'Commissioner', sans-serif;
 }
 
+@keyframes esmanecer{
+    from{
+        bottom: 1000px;
+        opacity: 0;
+    }
+    to{
+        top: 100px;
+        opacity: 1;
+    }
+}
+
+#sobre, #skills, #projeto, #contato{
+    position: relative;
+    animation-name: esmanecer;
+    animation-duration: 3s;
+}
+
 li{
     list-style: none;
 }
@@ -195,6 +212,7 @@ main #skills div.row div div.progress{
 main #skills div > div.w-modify{
     background-color: #326273;
     height: 20px;
+    transition: all 0.5s;
 }
 
 main #skills div:nth-of-type(1) div > div.w-modify{
@@ -252,6 +270,9 @@ main #contato div .btn-outline-modify:hover{
     color: white;
 }
 
+main #contato div > h4{
+    font-size: 1.3em;
+}
 
 footer{
     background-color: #EEEEEE;
