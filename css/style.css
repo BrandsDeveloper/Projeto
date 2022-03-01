@@ -216,11 +216,11 @@ main #skills div > div.w-modify{
 }
 
 main #skills div:nth-of-type(1) div > div.w-modify{
-    width: 93%;
+    width: 80%;
 }
 
 main #skills div:nth-of-type(2) div > div.w-modify{
-    width: 84%;
+    width: 73%;
 }
 
 main #skills div:nth-of-type(3) div > div.w-modify{
@@ -274,6 +274,10 @@ main #contato div > h4{
     font-size: 1.3em;
 }
 
+main #contato input[type="text"], main #contato input[type="email"], main #contato input[type="tel"]{
+    height: 7vh;
+}
+
 footer{
     background-color: #EEEEEE;
     height: 45vh;
@@ -284,15 +288,21 @@ footer .font-modify{
 }
 
 footer p{
-    font-size: 15px;
+    font-size: 14.5px;
     font-style: italic;
+}
+
+footer div a i.fa-size{
+    padding: 0px 2px;
 }
 
 footer div a{
     background-color: #326273;
+    font-size: 14px;
     border-radius: 50px;
     padding: 8px 11px;
     color: rgb(248, 248, 248);
+    transition: all 0.5s;
 }
 
 footer div a:hover{
