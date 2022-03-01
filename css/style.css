@@ -130,6 +130,10 @@ main #home .h-modify h1{
     font-family: 'Commissioner', sans-serif;
 }
 
+main #home p > span{
+    color: #326273;
+}
+
 main #home .font-modify a{
     font-size: 0.7em;
     color: #3f4144;
