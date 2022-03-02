@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
   <head>
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
@@ -17,6 +18,7 @@
 
     <title> Lucas Brandão - Developer Web e Designer</title>
   </head>
+
   <body>
 
     <!-- Inico Cabeçalho -->
@@ -29,6 +31,7 @@
 
         <!-- Inicio Menu -->
           <ul class="m-0">
+
             <li class="nav-item h-50 mb-3"> 
               <a class="nav-link mx-auto mx-md-0" href="#home"> 
                 <i class="fas fa-home fa-lg"></i> 
@@ -468,5 +471,52 @@
     <script src="js/main.js"></script>
     <script src="js/typed.js"></script>
     <script src="js/typed.min.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script> 
+    
+    ScrollReveal().reveal('.container', { 
+      delay: 700, 
+      duration: 1500,
+      distance: '30px', 
+      desktop: true,
+      mobile: true, 
+    });
+
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(document).on("scroll", function () {
+          $('div.section').each(function () {
+            var id = $(this).attr("id");
+            if (isScrolledIntoView("#" + id)) {
+              $('a[href="#' + id + '"]').addClass("actived").siblings().removeClass("actived");
+            }
+          })
+        })
+
+        function isScrolledIntoView(elem) {
+          var docViewTop = $(window).scrollTop();
+          var docViewBottom = docViewTop + $(window).height();
+
+          var elemTop = $(elem).offset().top;
+          var elemBottom = elemTop + $(elem).height();
+
+          return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        }
+    </script>
+
+    <!-- <script> 
+
+    $('#header nav ul li a').click(function () {
+        $('#header nav ul li a').removeClass('actived');
+        $(this).addClass('actived');
+
+      });
+      
+      </script> -->
+
   </body>
 </html>

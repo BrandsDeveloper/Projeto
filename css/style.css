@@ -4,24 +4,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Commissioner', sans-serif;
-}
-
-@keyframes esmanecer{
-    from{
-        bottom: 1000px;
-        opacity: 0;
-    }
-    to{
-        top: 100px;
-        opacity: 1;
-    }
-}
-
-#sobre, #skills, #projeto, #contato{
-    position: relative;
-    animation-name: esmanecer;
-    animation-duration: 3s;
-}
+}       
 
 li{
     list-style: none;
@@ -78,8 +61,13 @@ header nav ul li a{
     transition: all 0.5s;
 }
 
-header nav ul li a:hover, .actived{
+header nav ul li a:hover{
     width: 100%;
+    background-color: #326273;
+    color: #f7f7f7;
+}
+
+.actived{
     background-color: #326273; /*mudar cor*/
     color: #f7f7f7;
 }
@@ -221,7 +209,7 @@ main #skills div > div.w-modify{
 
 main #skills div:nth-of-type(1) div > div.w-modify{
     width: 80%;
-''}
+}
 
 main #skills div:nth-of-type(2) div > div.w-modify{
     width: 73%;
