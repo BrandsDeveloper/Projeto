@@ -472,8 +472,8 @@
     <script src="js/typed.js"></script>
     <script src="js/typed.min.js"></script>
 
+    <!-- Script de Efeitos na Page -->
     <script src="https://unpkg.com/scrollreveal"></script>
-
     <script> 
     
     ScrollReveal().reveal('.container', { 
@@ -486,8 +486,22 @@
 
     </script>
     
+    <!-- Script de Marcação das Sections -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
+
+      $(document).ready(function () {
+          $("header nav ul li a").click(function (e) {
+            if (this.getAttribute("href").charAt(0) == "#") {
+                e.preventDefault();
+                $(this).addClass("actived");
+                $("header nav ul li a").removeClass("actived");
+                $("html, body").stop();
+                $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 400);
+            }
+          })
+        })
+
         $(document).on("scroll", function () {
           $('div.section').each(function () {
             var id = $(this).attr("id");
