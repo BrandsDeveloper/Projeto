@@ -33,7 +33,7 @@
           <ul class="m-0">
 
             <li class="nav-item h-50 mb-3"> 
-              <a class="nav-link mx-auto mx-md-0" href="#home"> 
+              <a class="actived nav-link mx-auto mx-md-0" href="#home"> 
                 <i class="fas fa-home fa-lg"></i> 
                 <span class="ml-2">Home</span> 
               </a> 
@@ -287,6 +287,7 @@
       </section>
       <!-- Fim sessão - Habilidades -->
 
+      <!-- Quarta Sessão - Portfólio -->
       <section id="projeto" class="pt-3 mt-5">
 
         <div class="container mt-5">
@@ -321,7 +322,9 @@
         </div>
 
       </section>
+      <!-- Fim Sessão - Portfólio -->
 
+      <!-- Quinta Sessão - Contato -->
       <section id="contato" class="pt-3">
 
         <div class="container mt-5">
@@ -416,8 +419,7 @@
         </div>
 
       </section>
-
-
+      <!-- Fim Sessão - Contato -->
 
     </main>
     <!-- Fim Conteúdo -->
@@ -466,71 +468,58 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <!-- JavaScript External -->
+    <!-- JavaScript External Utilizado Plugins -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/main.js"></script>
     <script src="js/typed.js"></script>
     <script src="js/typed.min.js"></script>
 
-    <!-- Script de Efeitos na Page -->
+    <!-- Script de Efeitos na Page Utilizado Plugins -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script> 
     
-    ScrollReveal().reveal('.container', { 
-      delay: 700, 
-      duration: 1500,
-      distance: '30px', 
-      desktop: true,
-      mobile: true, 
-    });
+        ScrollReveal().reveal('.container', { 
+          delay: 700, 
+          duration: 1500,
+          distance: '30px', 
+          desktop: true,
+          mobile: true, 
+        });
 
     </script>
     
-    <!-- Script de Marcação das Sections -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Script de Marcação das Sections ao click e Scroll Utilizado pela Web -->
     <script>
 
-      $(document).ready(function () {
-          $("header nav ul li a").click(function (e) {
-            if (this.getAttribute("href").charAt(0) == "#") {
-                e.preventDefault();
-                $(this).addClass("actived");
-                $("header nav ul li a").removeClass("actived");
-                $("html, body").stop();
-                $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 400);
+      (function () {
+          'use strict';
+
+          var section = document.querySelectorAll("section");
+          var sections = {};
+          var i = 0;
+
+          Array.prototype.forEach.call(section, function (e) {
+            sections[e.id] = e.offsetTop;
+          });
+
+          window.onscroll = function () {
+            var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+            for (i in sections) {
+              if (sections[i] <= scrollPosition) {
+                document.querySelector('.actived').setAttribute('class', 'nav-link mx-auto mx-md-0');
+                document.querySelector('a[href*=' + i + ']').setAttribute('class', 'actived nav-link mx-auto mx-md-0');
+              }
             }
-          })
-        })
+          };
+        })();
 
-        $(document).on("scroll", function () {
-          $('div.section').each(function () {
-            var id = $(this).attr("id");
-            if (isScrolledIntoView("#" + id)) {
-              $('a[href="#' + id + '"]').addClass("actived").siblings().removeClass("actived");
-            }
-          })
-        })
+        $('#header nav ul li a').click(function () {
+            $('#header nav ul li a').removeClass('actived');
+            $(this).addClass('actived');
+        });
 
-        function isScrolledIntoView(elem) {
-          var docViewTop = $(window).scrollTop();
-          var docViewBottom = docViewTop + $(window).height();
-
-          var elemTop = $(elem).offset().top;
-          var elemBottom = elemTop + $(elem).height();
-
-          return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-        }
     </script>
-
-    <!-- <script> 
-
-    $('#header nav ul li a').click(function () {
-        $('#header nav ul li a').removeClass('actived');
-        $(this).addClass('actived');
-
-      });
-      
-      </script> -->
 
   </body>
 </html>
