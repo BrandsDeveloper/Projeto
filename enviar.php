@@ -8,7 +8,7 @@ $cel = $_POST['number'];
 $msg = $_POST['msg'];
 
 
-$to = "lucasbrandao392@liderfinanceira.com";
+$to = "lucasbrandao392@gmail.com";
 
 $boundary = "XYZ-" . date("dmYis") . "-ZYX";
  $headers = "MIME-Version: 1.0\n";
@@ -24,10 +24,9 @@ $corpo_mensagem = "
 <br> <strong>Nome :</strong> $nome
 <br> <strong>Email:</strong> $email
 <br> <strong>Celular:</strong> $cel
-<br> <strong>Mensagem:</strong> $msg
-<br> <br> <br>
+<br> <br>
 
-Olá meu nome é $nome, meu email é : $email e meu telefone é: $cel e goostaria de falar: <br> <br> $msg <br> <br> aguardo o retorno. <br> <br>
+Olá meu nome é $nome, meu email é : $email e meu telefone é: $cel e gostaria de falar: <br> <br> $msg <br> aguardo o retorno. <br>
 ";
 
 $assunto = "Formulario do Site Currículo";
@@ -47,7 +46,7 @@ $assunto = "Formulario do Site Currículo";
 if(mail($to, $assunto, $mensagem, $headers))
 {
     echo "<br><br><center><b><font color='green'>Mensagem enviada com sucesso!";
-    echo "<br><br><a href='contato.html'>Voltar para a página de formulário</a>";
+    echo "<br><br><a href='index.html'>Voltar para a página de formulário</a>";
 } 
  else
  {

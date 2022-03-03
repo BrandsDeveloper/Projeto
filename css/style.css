@@ -105,7 +105,7 @@ main #home::before{
 
 main #home{
     height: 115vh;
-    background: url("../img/Fundo3.png") no-repeat center;
+    background: url("../img/Fundo3.webp") no-repeat center;
     background-size: cover;
 }
 
@@ -138,23 +138,21 @@ main .position-waves{
 
 main .hr{
     width: 8%;
-    border: 0.5px solid rgb(150, 141, 141);
+    border: 0.5px solid #968d8d;
     border-radius: 3px;
 }
 
 .hr:nth-of-type(1){
     width: 3%;
     border: 2px solid #326273;
+    background-color: #326273;
     position: relative;
     top: 3px;    
 }
 
 main #sobre > div > div .img{
-    height: 75vh;
-    border-radius: 50%;
-    background: url(../img/eu.JPG) no-repeat;
+    background: url(../img/eu.webp) no-repeat;
     background-size: cover;
-    background-position: 38%;
 }
 
 main #sobre div > h3{
@@ -272,7 +270,6 @@ main #contato input[type="text"], main #contato input[type="email"], main #conta
 
 footer{
     background-color: #EEEEEE;
-    height: 45vh;
 }
 
 footer .font-modify{
@@ -282,6 +279,7 @@ footer .font-modify{
 footer p{
     font-size: 14.5px;
     font-style: italic;
+    margin: 0;
 }
 
 footer div a i.fa-size{
@@ -350,7 +348,7 @@ footer div a:hover{
     }
 
     main #home{
-        background: url("../img/Fundo3.png") no-repeat ;
+        background: url("../img/Fundo3.webp") no-repeat ;
         background-size: cover;
         background-position-x: 87%;
         position: relative;
@@ -363,10 +361,20 @@ footer div a:hover{
     }
 
     main #sobre > div > div .img{
-        height: 40vh;
+        height: 46vh;
+        width: 46vh;
+        margin-bottom: 30px;
     }
     
     main #skills div.row p{
         font-size: 0.9em;
+    }
+
+    footer .font-modify{
+        font-size: 39px;
+    }
+
+    footer p{
+        font-size: 15px;
     }
 }
