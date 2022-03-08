@@ -237,6 +237,56 @@ main #projeto div img{
     width: 100%;
 }
 
+main #projeto div .back{
+    overflow: hidden;
+}
+
+main #projeto div .back::before{
+    content: "";
+    position: absolute;
+    background-color: #EEEEEE;
+    opacity: 0;
+    z-index: 2;
+    transition: ease-in 0.5s;
+}
+
+main #projeto .back > .backimg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: ease-in 0.5s;
+    z-index: 3;
+}
+
+main #projeto div.back:hover::before{
+    top: 0;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    opacity: 0.7;
+}
+
+main #projeto div.back:hover .backimg{
+    opacity: 1;
+}
+
+main #projeto a{
+    color: black;
+    text-decoration: none;
+}
+
+main #projeto a:hover{
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+}
+
 main #contato .background{
     background-color: #326273;
     padding: 15px 18px;
